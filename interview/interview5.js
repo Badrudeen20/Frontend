@@ -112,3 +112,48 @@ let fun = show()
 fun() */
 
 
+/* 
+{name:'badru',age:20,color:'black'}
+Iterate this obj using polyfill
+*/
+/* const person = {name:'badru',age:20,color:'black'}
+Object.prototype.forEach = function(cb){
+      Object.keys(this).forEach(key=>{
+            cb(key,this[key])
+      })
+}
+person.forEach((key,val)=>{
+      console.log(key,val)
+}) */
+
+ /* This Keyword in javascript
+   this keyword refers to the current context or scope within which code is executing. Its value is determined by how a function is called, and it can dynamically change depending on the invocation context
+
+   this keyword behaive different in stric mode and non-strict mode
+*/
+
+/* function exampleFunction() {
+      console.log(this); // Refers to the current execution context
+}
+exampleFunction()
+
+function greet() {
+      console.log('Hello, my name is ' + this.name);
+}
+     
+const person = {
+      name: 'John',
+      sayHello: greet
+};
+
+const anotherPerson = {
+      name: 'Alice'
+};
+greet(); // Output: Hello, my name is undefined
+person.sayHello();
+greet.call(anotherPerson); */
+
+/* 
+Arrow Function Binding
+When this is used in the arrow function then this has lexical scope so without the function keyword this is unable to refer to the object in the outer scope. 
+*/
