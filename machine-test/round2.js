@@ -64,7 +64,7 @@ console.log(originalArray);
 console.log(copiedArray); */
 
 // Find the longest non repeated string
-const str = 'ABCCABABABAB'
+/* const str = 'ABCCABABABAB'
 function findLongestNonRepeated(string){
     const arr = string.split('')
     let repeat = ''
@@ -91,7 +91,7 @@ function findLongestNonRepeated(string){
         }
     }
     return longestStr.join('')
-}
+} */
 
 /* function findLongestNonRepeated(longestStr){
      let strArr = []
@@ -111,4 +111,18 @@ function findLongestNonRepeated(string){
      console.log(strArr,subStr)
 } */
 
-console.log(findLongestNonRepeated(str))
+// findLongestNonRepeated(str)
+
+ /* 
+ What would be the result of 3+2+”7″?
+ */
+console.log(3+2+"7")
+// console.log(NEGATIVE_INFINITY)
+console.log(typeof NULL)
+
+ /* 
+ What are the types of Pop up boxes available in JavaScript?
+ Alert
+ Confirm
+ Prompt
+ */

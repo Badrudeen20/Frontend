@@ -2,10 +2,10 @@
 
 //Q1 What is Function Declaration OR Function Defintion OR Function Statement
  
-function name(text){
+/* function name(text){
       console.log(text)
 }
-name('Function Declaration')
+name('Function Declaration') */
 
 /* Q2 What is Function Expression 
   Ans:When U store a function inside a variable is called fuction expression
@@ -13,9 +13,9 @@ name('Function Declaration')
 /* const show = function(){
        console.log('Function Expression')
 } */
-const show = ()=>{
+/* const show = ()=>{
        console.log('Function Expression')
-}
+} */
 
 /* Q3 What is Annonimous Function 
    Ans: A function Which have no name can be assign to a variable or passed as a callback 
@@ -34,9 +34,9 @@ firstClass(name) */
 /* Q4 What is IIFE 
    Ans:IIFE means Immediatly invoked function expression
 */
-(function(){
+/* (function(){
       console.log('Annonimous Function')
-})()
+})() */
 
 /* Closer are function which have ability to access the variable out of it laxical scope
  */
@@ -66,11 +66,12 @@ var fun = function(){
 fun() */
 
 /* Q6 Params vs Arguments */
-function js(params){  //Params Which we received on function
+
+/* function js(params){  //Params Which we received on function
   console.log(params)
 }
 js('name') //Arguments Which are pass when we call the function
-
+ */
 /* Q7 Rest vs Spread Operator 
    The spread operator helps us expand an iterable such as an array,
    it also helps to expand the object expressions. 
@@ -79,11 +80,11 @@ js('name') //Arguments Which are pass when we call the function
    It collects several elements and compresses them
 */
 
-function multiply(...par){
+/* function multiply(...par){
   console.log(par)
 }
 const arr = [3,4]
-multiply(...arr)
+multiply(...arr) */
 
 
 /* Difference Between Arrow Function vs Regular Function */
@@ -205,3 +206,50 @@ res() */
 const sum = (a,b)=> a + b 
 const totalSum = curring(sum)
 console.log(totalSum(1)(2)) */
+
+
+/* function curring(fn){
+   return function recursive(...arg){
+      if(fn.length <=arg.length){
+         return fn(...arg)
+      }else{
+         return function (...next){
+               return recursive(...arg,...next)
+         }
+      }
+   } 
+}
+const sum= (a,b,c)=>a+b+c
+const convert = curring((a,b,c)=>a+b+c)
+console.log(convert(1)(2)(3),sum(1,2,3)) */
+
+/* function calc(num1,num2){
+   for (let i = 0; i < 1000000000; i++) {}
+   return num1 + num2
+}
+
+
+function memoize(fn){
+   let obj = {}
+   return function(...arg){
+      const cach = JSON.stringify(arg)
+      if(!obj[cach]){
+         obj[cach] = fn.call(this,...arg)
+      }else{
+         return obj[cach]
+      } 
+      
+   }
+   
+}
+
+console.time("1")
+calc(1,2)
+console.timeEnd("1")
+console.time("2")
+const invoke = memoize(calc)
+invoke(1,2)
+console.timeEnd("2")
+console.time("3")
+invoke(1,2)
+console.timeEnd("3") */

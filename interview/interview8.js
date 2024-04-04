@@ -54,7 +54,7 @@ When this is used in the arrow function then this has lexical scope so without t
 
 arrow function don't provide their own this binding it retains the value of this enclosing lexical context
 */
-
+/* 
 const obj4 = {
       name:'manual',
       age:20,
@@ -65,8 +65,20 @@ const obj4 = {
             y()
       }  
 }
-obj4.x()
+obj4.x() */
 
+
+//object letrial
+const showObj = {
+    name:'virat',
+    age:20,
+    getName:function(){
+      const name = ()=> this.name
+      return name()
+    }
+    
+}
+console.log(showObj.getName())
 
 // this inside dom element
 /* 

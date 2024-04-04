@@ -42,7 +42,7 @@ findCommonObj(input1,input2)
 
 
 /* 
-Find the second higest no from array with using one loop  and without using built-in function
+Find the second higest no from array with using one loop and without using built-in function
 */
 const input3 = [1,3,5,2,5,3,-4,7]
 function secoundHigestElement(arr,h=null){
