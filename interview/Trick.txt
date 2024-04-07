@@ -1,0 +1,7 @@
+Q1) Reverse a number
+Ans- let last = 1234%10 = 4
+     let rem = Math.floor(1234/10) = 123
+     let rev = last * 10 + rem%10 = 43
+
+Q2)Star pyramid pattern
+   if(5 >= 5 && 5 >= 5)

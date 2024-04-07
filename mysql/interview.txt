@@ -1,0 +1,41 @@
+Q1) Find the total no of student whose gender is male and female
+Ans- SELECT gender, count(gender) as total_gender from student
+     GROUP BY gender
+
+Q2)Find the second highest salary
+Ans-SELECT MAX(salary) from employee
+    WHERE salary < SELECT MAX(salary) from employee
+
+Q3)What is the purpose of an index in SQL, and how does it work?
+Ans-An index is use to improve the performance of query for fast 
+    data retrieval, It allow to create data structure that store value
+    and allow fast access to data.
+
+Q4)Write a SQL query to find the names of employees who have not been assigned to any project.
+Ans-SELECT employees.name
+      FROM employees
+      LEFT JOIN projects
+      ON employees.employee_id = projects.employee_id
+      WHERE projects.employee_id IS NULL;
+
+Q5)In the Student table, the marks column 
+   contains a list of values separated by 
+   commas. How can you determine the number of values in this comma-separated list?
+Ans-SELECT id, name, marks, LENGTH(marks) - LENGTH(REPLACE(marks, ',', '')) + 1 AS num_marks
+      FROM Student
+      WHERE id = 1;
+
+Q6)What are the different types of normalizations?
+Ans-In database design, several types of normalization are used to reduce data redundancy, improve data integrity, and ensure efficient data retrieval. The different types of normalizations are 
+
+      First Normal Form (1NF): This normalization ensures that the data in each table's column is atomic, meaning that it cannot be further broken down into smaller pieces. It also eliminates duplicate rows from the table.
+      
+      Second Normal Form (2NF): This normalization eliminates partial dependencies by ensuring that each non-key column in a table is dependent on the entire primary key rather than on its part of it.
+      
+      Third Normal Form (3NF): This normalization eliminates transitive dependencies by ensuring that each non-key column in a table is dependent only on the primary key and not on any other non-key columns.
+      
+      Boyce-Codd Normal Form (BCNF): This normalization is an extension of 3NF and ensures that each determinant in a table is a candidate key.
+      
+      Fourth Normal Form (4NF): This normalization eliminates multivalued dependencies by ensuring that each non-key column in a table is dependent on the entire primary key and not on any subsets.
+      
+      Fifth Normal Form (5NF): This normalization is known as the Project-Join Normal Form and ensures that each table in a database has a single theme or topic.

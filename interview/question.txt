@@ -1,0 +1,16 @@
+Q1 Write a function to reverse string and number
+Q2 write a function remove duplicate element from array
+Q3 Write a function that check whether a given
+   string is a palindrome or not
+Q4 write a function that return the longest word in the sentence
+Q5 write a function to check whether two
+   string are anagrams or not (anagrams mean two word contain same spelling)
+Q6 write a function that return the number of vowels in a string
+Q7 find the largest number in an array
+Q8 find the second largest number in an array
+Q9 write a function to check if a given
+   number is prime or not
+Q10 write a function to calculate the factorial
+    of a number
+Q11 write a program to remove all whitespace character from a string
+Ans- str.replace(/\s/g,"")

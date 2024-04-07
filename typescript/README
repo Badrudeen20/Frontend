@@ -1,1 +1,2 @@
 # To Compile the ts --- tsc app.ts
+# To initialize  tsc --init

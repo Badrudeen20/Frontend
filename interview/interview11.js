@@ -76,9 +76,8 @@ function pattern3(){
       let pattern = ""
       let num = 4
       for (let i = 1; i < num; i++) {
-            for (let j = 1; j <=(2*num); j++) {
-                 if(i+j >= (num+1) && i >=(j-num)+1){
-                  pattern += "#"
+            for (let j = 1; j <=(2*num); j++) { 
+                 if(i+j >= (num+1) && i >=(j-num)+1){  // 5 && 2 > 5-4                  pattern += "#"
                  }else{
                   pattern += " "
                  }
