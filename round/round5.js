@@ -38,6 +38,7 @@ const diffInMilliseconds = Math.abs(dateFormate(date1) - dateFormate(date2));
 
 // Convert milliseconds to hours
 const diffInDays = diffInMilliseconds / (1000 * 60 * 60 * 24);
+                   // longnumber/
 //console.log(diffInDays);
 
 
@@ -56,4 +57,4 @@ let year = today.getFullYear()
 let month = today.getMonth()+1
 let day = today.getDate()
 month = month.length == 1 ? month.padStart('2', '0') :month; 
- day = day.length == 1 ? day.padStart('2', '0') : day;
+day = day.length == 1 ? day.padStart('2', '0') : day;

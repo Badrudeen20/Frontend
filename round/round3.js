@@ -1,7 +1,7 @@
 /* 
 Q1-Find the missing number in a given integer array of 1 to 100
 */
-function missingNo(arr){
+/* function missingNo(arr){
    let temp = arr[0]
    for(let i = 0; i < arr.length; i++) {
       if(temp!==arr[i]){
@@ -11,16 +11,16 @@ function missingNo(arr){
       
    }
 }
-missingNo([1,2,3,4,5,6,7,8,10])
+missingNo([1,2,3,4,5,6,7,8,10]) */
 
-const findMissingNum = (arr)=>{
+/* const findMissingNum = (arr)=>{
       for (let i = 0; i < arr.length; i++) {
           if(arr[i]+1 !== arr[i+1]){
             return arr[i]+1
           }
       }
 }
-findMissingNum([1,2,3,4,5,6,7,8,10])
+findMissingNum([1,2,3,4,5,6,7,8,10]) */
 
 /* 
 Q2-Find a duplicate number in an array of integers
@@ -117,6 +117,17 @@ const getFactorial = (inputNum) => {
   }
 getFactorial(5)
 
+
+/* function factorial(n) { 
+  
+  if(n>1 ){
+    return n * factorial(n - 1); 
+  }
+  return 1
+   
+  
+} 
+console.log(factorial(5)) */
 /* 
 Q7-Write a program to check whether number is perfect number or not ?
 */
@@ -193,4 +204,22 @@ const isPerfectNum = (inputNum) => {
   }
 isPrime(17)
 //console.log(isPrime(18));
+
+
+function findSecoundLargest(arr){
+   let largest = Number.NEGATIVE_INFINITY
+   let secondlargest = Number.NEGATIVE_INFINITY
+   for (let i = 0; i < arr.length; i++) {
+       if(arr[i] > largest){
+        secondlargest = largest
+        largest = arr[i]
+       }else if(arr[i]!==largest && arr[i] > secondlargest){
+        secondlargest = arr[i]
+       }
+    
+   }
+   console.log(secondlargest)
+}
+findSecoundLargest([1,4,6,3,7,9,6])
+
 

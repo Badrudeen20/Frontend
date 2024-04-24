@@ -1,0 +1,21 @@
+Q1)Write a SQL Query to fetch all the duplicate records in a table.
+Ans- 
+Q2)Write a SQL query to fetch the second last record from employee table.
+Q3)Write a SQL query to display only the details of employees who either earn the highest salary or the lowest salary in each department from the employee table.
+Q4)From the students table, write a SQL query to interchange the adjacent student names.
+
+----------Join Query Question------------
+Q1.write a sql query to find the name of the departname where more
+   than two employee are working.
+
+Ans-SELECT employees.name,count(employees.name) as emp_no FROM projects LEFT JOIN employees ON employees.employee_id = projects.employee_id GROUP BY employees.employee_id HAVING COUNT(employees.employee_id) > 1;
+
+Q2.Write a sql query to calculate the average salary of each departmant which
+   is higher than 5000.find the departmant name also in DESC
+
+Ans-
+
+Q3.write a sql query to find the manage and employee who belongs to
+   same city.
+Q4)write a sql query to find those employee whose salary
+   exist between 3000 to 9000 with departmant and manager name 

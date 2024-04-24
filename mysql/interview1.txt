@@ -1,0 +1,149 @@
+----------Query Question---------
+Q1) Find the total no of student whose gender is male and female
+Ans- SELECT gender, count(gender) as total_gender from student
+     GROUP BY gender
+
+Q2)Find the second highest salary
+Ans-SELECT MAX(salary) from employee
+    WHERE salary < SELECT MAX(salary) from employee
+
+   -SELECT MAX (column_name) 
+    FROM table_name 
+    WHERE column_name NOT IN (SELECT Max (column_name) FROM table_name); 
+
+Q3)Write a SQL query to find the names of employees who have not been assigned to any project.
+Ans-SELECT employees.name
+      FROM employees
+      LEFT JOIN projects
+      ON employees.employee_id = projects.employee_id
+      WHERE projects.employee_id IS NULL;
+
+Q4)In the Student table, the marks column 
+   contains a list of values separated by 
+   commas. How can you determine the number of values in this comma-separated list?
+Ans-SELECT id, name, marks, LENGTH(marks) - LENGTH(REPLACE(marks, ',', '')) + 1 AS num_marks
+      FROM Student
+      WHERE id = 1;
+
+Q5)Find the third highest salary from table
+Ans-SELECT model_name,price FROM cars ORDER BY price DESC LIMIT 2,1;
+
+
+Q6)Find the Nth highest salary from table without using TOP limit
+Ans-SELECT DISTINCT price FROM cars c1 WHERE 3=(SELECT COUNT(DISTINCT price) FROM cars c2 WHERE c2.price >= c1.price);
+
+Q7)Find dublicate rows in table
+Ans- select name, count(name) as no_of from table group by name 
+
+Q8)Calculate the even and odd record from table
+Ans-SELECT * FROM cars WHERE MOD(id,2)=0; //Even
+   -SELECT * FROM cars WHERE MOD(id,2)=1; //Odd
+
+Q9)Display the first and last record from table
+Ans-SELECT * FROM cars WHERE id = (SELECT MIN(id) FROM cars);
+   -SELECT * FROM cars WHERE id = (SELECT MAX(id) FROM cars);
+
+Q10)How do you copy all rows of table 
+Ans-CREATE TABLE bikes AS SELECT * FROM cars;
+   -CREATE TABLE bikes AS SELECT model_name,brand,price FROM cars;
+   -CREATE TABLE bikes AS SELECT * FROM cars WHERE 3=4
+
+Q11)Show last 3 record from table
+Ans-SELECT * FROM employees ORDER BY employee_id DESC LIMIT 3;
+
+Q12)Find the employee whose name end with a and  
+    contain 5 letter
+Ans-
+
+Q13)Delete dublicate record from table
+Ans -DELETE FROM cars WHERE id IN (SELECT id FROM cars GROUP BY model_name HAVING COUNT(model_name) > 1);
+    -DELETE FROM cars WHERE id NOT IN (SELECT min(id) FROM cars GROUP BY model_name);
+
+Q14)Add new column in table with value
+Ans-ALTER TABLE cars ADD COLUMN price INT(255);
+
+Q15)Update table column with random value;
+Ans -UPDATE Employees
+        SET Department = 
+            CASE 
+                WHEN rand_dept = 1 THEN 'hr'
+                WHEN rand_dept = 2 THEN 'developer'
+                ELSE 'employee'
+            END
+        FROM
+            (SELECT
+                EmployeeID,
+                FLOOR(RAND() * 3) AS rand_dept
+            FROM
+                Employees) AS temp
+        WHERE
+            Employees.EmployeeID = temp.EmployeeID;
+
+Q16)Delete dublicate record from table
+Ans-DELETE FROM cars c1, cars c2
+    WHERE c1.model_name = c2.model_name AND c1.model_id > c2.model_id
+    
+Q17)Find number of employee whose dob between 01/04/2002 t0 01/09/2003
+Q18)Display 50% record from table
+Ans-SELECT * FROM employees 
+    WHERE id >= (SELECT COUNT(id)/2 FROM employees)
+Q16)Write a query to display total salary of 
+    each dept after adding 10% increment
+Q17)write a query to find two min and max salary
+Ans-SELECT DISTINCT salary FROM employees e1
+    WHERE 2>=(SELECT COUNT(DISTINCT salary) FROM employees e2 WHERE e1.salary >= e2.salary)
+Q18)fetch employee name with replace space with 
+Q19)Find first 4 char of employee name
+Ans-SELECT SUBSTRING(name,1,4) FROM employees;
+Q20)Write a query to fetch the department-wise count of employees sorted by department’s count in ascending order.
+Ans-SELECT department.dept_id, department.dept_name,COUNT(employees.employee_id) FROM employees
+    LEFT JOIN department
+    ON department.dept_id = employees.dept
+    GROUP BY department.dept_name
+    ORDER BY COUNT(employees.employee_id) ASC;
+Q21) Write a query to calculate the even and odd records from a table.
+Ans-SELECT COUNT(employees.employee_id) even_record FROM employees WHERE MOD(employees.employee_id,2)=0;
+Q22)Write a SQL query to retrieve student details from employee table who have a mark in the student table.
+Ans-SELECT * FROM employees e WHERE EXISTS (SELECT * FROM student s WHERE s.id = e.student_id AND s.marks IS NOT NULL);
+Q23)Write a query to retrieve two minimum and maximum salary from the employee table.
+Ans-SELECT DISTINCT student_id FROM employees e1 WHERE 2 >= (SELECT COUNT(DISTINCT student_id) FROM employees e2 WHERE e1.student_id >= e2.student_id);
+Q24)Write a query to retrieve the list of employees working in the same department.
+Ans-
+Q25)Write a query to retrieve the last 3 records from the EmployeeInfo table.
+Ans-
+Q26)Write a query to find the third-highest salary from the EmpPosition table.
+Ans-
+
+Q27)Write a query to display the first and the last record from the EmployeeInfo table
+Ans-SELECT employees.name FROM employees WHERE employees.employee_id = (SELECT MAX(employees.employee_id) FROM employees);
+Q28) Write a query to add email validation to your database
+Ans-SELECT Email FROM EmployeeInfo WHERE NOT REGEXP_LIKE(Email, ‘[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}’, ‘i’);
+
+Q29)Write a query to retrieve Departments who have less than 2 employees working in it.
+Ans-SELECT department.dept_name,count(employees.employee_id) as employee 
+    FROM department RIGHT JOIN employees ON employees.dept = department.dept_id
+    GROUP BY department.dept_name HAVING COUNT(employees.employee_id) < 2;
+
+Q30)Write a query to retrieve EmpPostion along with total salaries paid for each of them.
+Ans-
+Q31)
+Ans-SELECT name,id FROM student WHERE stream IN (SELECT stream FROM student GROUP BY stream HAVING COUNT(stream) > 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,5 +1,5 @@
 /*
-
+Q1
 #
 ##
 ###
@@ -27,7 +27,7 @@ function pattern1(){
 
 // pattern1()
 
-/*
+/*Q2
    #
   ##
  ###
@@ -63,7 +63,7 @@ function pattern2(){
 // pattern2()
 
 
-/* 
+/* Q3
 
    #
   ###
@@ -96,7 +96,7 @@ function pattern3(){
 // pattern3()
 
 
-/* 
+/*Q4
 
 #####
  ####
@@ -124,7 +124,7 @@ function patter4(){
 // patter4()
 
 
-/* 
+/*Q5
 
 ####
 ###
@@ -150,7 +150,7 @@ function patter5(){
 //patter5()
 
 
-/* 
+/*Q6
 
 #####
  ###
@@ -159,7 +159,7 @@ function patter5(){
 */
 
 function pattern6(){
-      let pattern = ""
+     /*  let pattern = ""
       let num = 5
      for (let i = num; i >=1; i--) {
         for (let j = 1; j<=(num*2); j++) {
@@ -171,21 +171,21 @@ function pattern6(){
         }
         pattern+="\n"
       
-     }
-      console.log(pattern)
+     } */
+      
 
-      /* let num = 5
+      let num = 5
       for (let k = 5; k >= 1; k--) {
             let str = "#"
             let space = " "
-            console.log(space.repeat(num-k)+str.repeat((k*2)-1))
-      }   */
+            // console.log(space.repeat(num-k)+str.repeat((k*2)-1))
+      }  
 }
 pattern6()
 
 
 
-/* 
+/*Q7 
 
 * * * * * * * * * 
   *           *   
@@ -195,8 +195,21 @@ pattern6()
 
 */
 
+/* let n = 5; 
+for (let i = n; i >= 1; i--) {     
+   let str = ''
+    for(let j = 1; j <= 2*n-1 ; ++j){ 
+        if(i+j == n +1||(i+n==j+1) ||i==n) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+    console.log(str); 
+} */
 
-/* 
+
+
+/*Q8 
 
 *         
 * *       
@@ -211,7 +224,31 @@ pattern6()
 */
 
 
-/* 
+/* let n = 5; 
+for (let i = 1; i <= n; i++) { 
+    let str = ''
+    for(let j = 1; j <= n ; ++j){ 
+        if(i==j||j==1) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+  
+    console.log(str); 
+} 
+for (let i = n-1; i >= 1; i--) {     
+  let str = ''
+    for(let j = 1; j <= n ; ++j){ 
+        if(i==j||j==1) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+    console.log(str); 
+} */
+
+
+/*Q9 
 
         * 
       * * 
@@ -226,7 +263,31 @@ pattern6()
 */
 
 
-/* 
+/* let n = 5; 
+for (let i = 1; i <= n; i++) { 
+    let str = ''
+    for(let j = 1; j <= n ; ++j){ 
+        if(i+j==1+n||j==n) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+  
+    console.log(str); 
+} 
+for (let i = n-1; i >= 1; i--) {     
+  let str = ''
+    for(let j = 1; j <= n ; ++j){ 
+        if(i+j==n+1||j==n) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+    console.log(str); 
+}
+ */
+
+/*Q10 
 
         *         
       *   *       
@@ -235,3 +296,15 @@ pattern6()
 * * * * * * * * * 
 
 */
+
+/* let n = 5; 
+for (let i = 1; i <= n; i++) { 
+    let str = ''
+    for(let j = 1; j <= 2*n-1 ; ++j){ 
+        if(i+j == n +1||(i+n==j+1) ||i==n) 
+        str+='* '; 
+        else
+        str+='  '; 
+    } 
+    console.log(str); 
+} */
