@@ -5,6 +5,7 @@ EX: const input = [2,7,11,4,-2]
 */
 const input = [2,7,11,4,-2]
 function sumOfElment(arr){
+   // CASE 1
    const temp = []
    const length = arr.length
    for(let i = 0; i < length; i++) {
@@ -16,7 +17,19 @@ function sumOfElment(arr){
       }
       temp.push(sum)
    }
-   return temp
+
+   // CASE 2
+   const output = []
+   let sum = 0
+   for(let i =0;i<arr.length;i++){
+        sum = arr.filter((item)=>item!=arr[i]).reduce((a,c)=>a+c,0)
+        output.push(sum)
+   }
+
+   return {
+      "A":temp,
+      "B":output
+   }
 }
 sumOfElment(input)
 

@@ -48,27 +48,7 @@ function findLand(arr){
 
 
 
-/* Q2.Validate paranthes */
-function isValid(str){
-      const stack = []
-      const checkParam = '{} () []'
-      let i = 0;
-      while(i < str.length){
-          stack.push(str[i])
-          i++
-          const open = stack[str.length - 2]
-          const close = stack[str.length - 1]
-      
-          const parm = open+close
-          
-          if(checkParam.includes(parm)){
-            stack.pop()
-            stack.pop()
-          }
-      }
-      return stack.length === 0
-}
-// isValid("()")
+
 
 /* Q3.Number of provinces */
 

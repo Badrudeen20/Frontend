@@ -24,3 +24,5 @@ const animal = {
 const Cat = new Pet('Cat')
 // console.log(Cat.getName(),Cat.getSurname())
 console.log(animal.getName(),animal.getSurname())
+
+

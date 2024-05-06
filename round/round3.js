@@ -47,17 +47,16 @@ findDub([1,2,2,2,2,,3,4,5,6,7,7,8,6,10])
 */
 
 function findMaxMin(arr){
-      let min = arr[0]
-      let max = arr[0]
-      for (let i = 0; i < arr.length; i++) {
-            if(max < arr[i]){
-                  max = arr[i]
-            }
-            if(min > arr[i]){
-                  min = arr[i]
-            }
-      } 
-      
+    let min = arr[0]
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+          if(max < arr[i]){
+                max = arr[i]
+          }
+          if(min > arr[i]){
+                min = arr[i]
+          }
+    }  
 }
 findMaxMin([8,5,3,6,6,3,2,6,4,8,63,2])
 
@@ -79,13 +78,7 @@ findCumulative([1,3,5,7])
 Q5-Find all pairs in an array of integers whose sum is equal to a given number
 */
 
-/* 
-function findSumPair(arr,pair){
-      for (let i = 0; i < arr.length; i++) {
-            
-      }
-}
-findSumPair([1,5,6,1,0,1],2) */
+
 
 let arr = [1,5,6,1,0,1];
 const findSumPairs = (arr, value) => {

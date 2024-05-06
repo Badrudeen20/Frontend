@@ -12,3 +12,5 @@ class Name {
       }
 
 }
+const numstr:(string|number)[] = [1,'badru',2]
+console.log(numstr)
